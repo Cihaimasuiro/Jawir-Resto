@@ -6,9 +6,9 @@
   box-sizing: border-box;
   font-family: 'Poppins',sans-serif;
 }
-body.login{
+/* This one rule now targets both pages */
+body.login, body.register{
   background: gray;
-  /* background: #1abc9c; */
   overflow: hidden;
   align-items: center;
   justify-content: center;
@@ -30,7 +30,6 @@ body.login{
 .wrapper .title{
   height: 90px;
   background: gray;
-  /* background: #16a085; */
   border-radius: 5px 5px 0 0;
   color: #fff;
   font-size: 30px;
@@ -59,7 +58,6 @@ body.login{
 }
 form .row input:focus{
   border-color: gray;
-  /* border-color: #16a085; */
   box-shadow: inset 0px 0px 2px 2px white;
 }
 form .row input::placeholder{
@@ -73,8 +71,6 @@ form .row input::placeholder{
   font-size: 18px;
   background: gray;
   border: 1px solid gray;
-  /* background: #16a085;
-  border: 1px solid #16a085; */
   border-radius: 5px 0 0 5px;
   display: flex;
   align-items: center;
@@ -85,7 +81,6 @@ form .row input::placeholder{
 }
 .wrapper form .pass a{
   color: gray;
-  /* color: #16a085; */
   font-size: 17px;
   text-decoration: none;
 }
@@ -99,38 +94,32 @@ form .row input::placeholder{
   padding-left: 0px;
   background: gray;
   border: 1px solid gray;
-  /* background: #16a085;
-  border: 1px solid #16a085; */
   cursor: pointer;
 }
 form .button input:hover{
   background: whitesmoke;
 }
-.wrapper form .signup-link{
+.wrapper form .signup-link,
+.wrapper form .signin-link {
   text-align: center;
   margin-top: 20px;
   font-size: 17px;
 }
-.wrapper form .signup-link a{
+.wrapper form .signup-link a,
+.wrapper form .signin-link a {
   color: gray;
-  /* color: #16a085; */
   text-decoration: none;
 }
-form .signup-link a:hover{
+form .signup-link a:hover,
+form .signin-link a:hover {
   text-decoration: underline;
 }
 
-body.comment {
-    font-family: 'Poppins', sans-serif;
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-}
-section {
-    padding: 2rem;
-    margin: 0;
-}
-h1 {
-    font-size: 2.5rem;
-    color: #333;
+/* Style for our new error message element */
+#error-message {
+    color: red;
+    font-size: 0.9rem;
+    text-align: center;
+    margin-bottom: 10px;
+    height: 15px; /* Reserve space to prevent layout jump */
 }
